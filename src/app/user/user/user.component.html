@@ -1,0 +1,94 @@
+
+
+  <!-- Main content -->
+  <section class="content">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header with-border">
+                        <h3 class="card-title">user form</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <div class="card-body">
+                    <form [formGroup]="createuser" (ngSubmit)="submitForm(createuser.value)" novalidate>
+                    <div class="box-body">
+                      
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">customer iD</label>
+                                    <input type="text" class="form-control" id="" formControlName="customer_id"
+                                        placeholder="customer id">
+                                        <span *ngIf="createuser.controls['customer_id'].hasError('required') && createuser.controls['customer_id'].touched" class="text-danger">Required</span>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">Name</label>
+                                    <input type="text" class="form-control" id="" formControlName="name"
+                                        placeholder="Name">
+                                        <span *ngIf="createuser.controls['name'].hasError('required') && createuser.controls['name'].touched" class="text-danger">Required</span>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">Description</label>
+                                    <input type="text" class="form-control" id="" formControlName="description"
+                                        placeholder="description">
+                                        <span *ngIf="createuser.controls['description'].hasError('required') && createuser.controls['description'].touched" class="text-danger">Required</span>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">street</label>
+                                    <input type="text" class="form-control" id="" formControlName="street"
+                                        placeholder="street">
+                                        <span *ngIf="createuser.controls['street'].hasError('required') && createuser.controls['street'].touched" class="text-danger">Required</span>
+                                </div>
+                            </div>
+                           
+        
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">postal code</label>
+                                    <input type="text" class="form-control" id="" formControlName="postal_code"
+                                        placeholder="postal_code">
+                                        <span *ngIf="createuser.controls['postal_code'].hasError('required') && createuser.controls['postal_code'].touched" class="text-danger">Required</span>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">city</label>
+                                    <input type="text" class="form-control" id="" formControlName="city"
+                                        placeholder="city">
+                                        <span *ngIf="createuser.controls['city'].hasError('required') && createuser.controls['city'].touched" class="text-danger">Required</span>
+                                </div>
+                            </div>
+                         
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">start date</label>
+                                    <input type="text" class="form-control" id="" formControlName="start_date"
+                                        placeholder="start date">
+                                        <span *ngIf="createuser.controls['start_date'].hasError('required') && createuser.controls['start_date'].touched" class="text-danger">Required</span>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="lbl">end date</label>
+                                    <input type="text" class="form-control" id="" formControlName="end_date"
+                                        placeholder="end date">
+                                        <span *ngIf="createuser.controls['end_date'].hasError('required') && createuser.controls['end_date'].touched" class="text-danger">Required</span>
+                                </div>
+                            </div>
+                           
+                       
+                    </div>
+                    <!-- /.box-body -->
+        
+                    <div class="box-footer txt-right" >
+                        <button  [disabled]="!createuser.valid"  type="submit" class="btn btn-success pull-right">Submit</button>&nbsp;&nbsp;
+                        <button class="btn btn-danger pull-right" value="Close without validation" style="margin-right: 5px;">Cancel</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+</section>
